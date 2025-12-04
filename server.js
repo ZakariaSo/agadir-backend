@@ -1,5 +1,7 @@
 import express from 'express';
 import sequelize from './src/config/database.js';
+import "./src/models/User.js";
+import "./src/models/Task.js";
 
 
 const app = express();
