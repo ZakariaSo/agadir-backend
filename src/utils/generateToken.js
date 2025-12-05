@@ -21,8 +21,6 @@ const generateToken = (user) => {
     jwtConfig.secret,
     {
       expiresIn: jwtConfig.expiresIn, // Expire dans 7 jours
-      issuer: jwtConfig.issuer,       // Émetteur
-      audience: jwtConfig.audience,   // Public
     }
   );
 
