@@ -1,9 +1,7 @@
 // src/validators/authValidator.js
 import { body, validationResult } from 'express-validator';
 
-/**
- * Règles de validation pour l'inscription
- */
+
 export const registerValidation = [
   body('name')
     .trim()
@@ -23,9 +21,7 @@ export const registerValidation = [
     .withMessage('Le mot de passe doit contenir au moins une majuscule, une minuscule et un chiffre'),
 ];
 
-/**
- * Règles de validation pour la connexion
- */
+
 export const loginValidation = [
   body('email')
     .trim()
@@ -37,9 +33,7 @@ export const loginValidation = [
     .notEmpty().withMessage('Le mot de passe est obligatoire'),
 ];
 
-/**
- * Middleware pour vérifier les erreurs de validation
- */
+
 export const validate = (req, res, next) => {
   const errors = validationResult(req);
   
